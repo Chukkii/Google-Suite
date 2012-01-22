@@ -1,0 +1,68 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="A7CF31DC-4BF1-462F-81D0-8E282884A081/f:MapManager.cs" caret="1146" fromTop="37" />
+      <File id="A7CF31DC-4BF1-462F-81D0-8E282884A081/f:Extensions.cs" caret="0" fromTop="0" />
+      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Controllers/f:HomeController.cs" caret="755" fromTop="21" />
+      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Views/d:Home/f:Index.cshtml" caret="201" fromTop="11" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Controllers/f:HomeController.cs" caret="117" fromTop="4" />
+      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Controllers/f:HomeController.cs" caret="581" fromTop="17" />
+      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Controllers/f:HomeController.cs" caret="805" fromTop="24" />
+      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Controllers/f:HomeController.cs" caret="755" fromTop="21" />
+      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Views/d:Home/f:Index.cshtml" caret="187" fromTop="9" />
+      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Views/d:Home/f:Index.cshtml" caret="340" fromTop="15" />
+      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Views/d:Home/f:Index.cshtml" caret="187" fromTop="10" />
+      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Views/d:Home/f:Index.cshtml" caret="340" fromTop="18" />
+      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Views/d:Home/f:Index.cshtml" caret="270" fromTop="15" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="ViewBag" priority="31" />
+      <Item value="using" priority="30" />
+      <Item value="Google.GData" priority="30" />
+      <Item value="Calendar" priority="26" />
+      <Item value="new" priority="127" />
+      <Item value="MapManager" priority="28" />
+      <Item value="calendarManager" priority="32" />
+      <Item value="IEnumerable" priority="31" />
+      <Item value="EventEntry`0" priority="63" />
+      <Item value="List" priority="31" />
+      <Item value="EventFeed`0" priority="31" />
+      <Item value="List&lt;EventEntry&gt;" priority="28" />
+      <Item value="eventEntry" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GoogleLibrary.CalendarManager">
+      <Item value="GetAllCalendarEvents`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Google.GData.Calendar.EventEntry">
+      <Item value="Title" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Google.GData.Client.AtomTextConstruct">
+      <Item value="Text" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

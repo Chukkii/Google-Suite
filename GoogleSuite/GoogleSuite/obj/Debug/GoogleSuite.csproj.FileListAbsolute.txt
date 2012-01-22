@@ -1,0 +1,17 @@
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\GoogleSuite.dll
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\GoogleSuite.pdb
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\EntityFramework.dll
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\Google.GData.Calendar.dll
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\Google.GData.Client.dll
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\Google.GData.Extensions.dll
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\Google.GData.AccessControl.dll
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\EntityFramework.xml
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\obj\Debug\GoogleSuite.dll
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\obj\Debug\GoogleSuite.pdb
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\GoogleCalendarLibrary.dll
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\Google.Api.Maps.Service.dll
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\Newtonsoft.Json.dll
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\GoogleCalendarLibrary.pdb
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\Google.Api.Maps.Service.pdb
+C:\Users\Bruce\GoogleSuite\GoogleSuite\GoogleSuite\bin\Google.Api.Maps.Service.xml

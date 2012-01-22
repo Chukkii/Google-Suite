@@ -1,0 +1,521 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Api.Maps.Service</name>
+    </assembly>
+    <members>
+        <member name="P:Google.Api.Maps.Service.Geocoding.GeocodingResult.Types">
+            <summary>
+            Indicates the type of the returned result. This array contains a
+            set of one or more tags identifying the type of feature returned
+            in the result. For example, a geocode of "Chicago" returns
+            "locality" which indicates that "Chicago" is a city, and also
+            returns "political" which indicates it is a political entity.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.GeocodingResult.FormattedAddress">
+            <summary>
+            A string containing the human-readable address of this location.
+            Often this address is equivalent to the "postal address," which
+            sometimes differs from country to country. (Note that some
+            countries, such as the United Kingdom, do not allow distribution
+            of true postal addresses due to licensing restrictions.) This
+            address is generally composed of one or more address components.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.GeocodingResult.Components">
+            <summary>
+            An array containing the separate address components.  For example,
+            the address "111 8th Avenue, New York, NY" contains separate
+            address components for "111" (the street number, "8th Avenue" (the
+            route), "New York" (the city) and "NY" (the US state).
+            </summary>
+        </member>
+        <member name="T:Google.Api.Maps.Service.Http">
+            <summary>
+            Provides an intuitive and simple HTTP client wrapper.
+            </summary>
+        </member>
+        <member name="T:Google.Api.Maps.Service.Geocoding.GeocodingRequest">
+            <summary>
+            Provides a request for the Google Maps Geocoding web service.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.GeocodingRequest.Address">
+            <summary>
+            The address that you want to geocode.
+            </summary>
+            <remarks>Required if latlng not present.</remarks>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.GeocodingRequest.LatitudeLongitude">
+            <summary>
+            The textual latitude/longitude value for which you wish to obtain
+            the closest, human-readable address.
+            </summary>
+            <remarks>Required if address not present.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/geocoding/#ReverseGeocoding"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.GeocodingRequest.Bounds">
+            <summary>
+            The bounding box of the viewport within which to bias geocode
+            results more prominently.
+            </summary>
+            <remarks>
+            Optional. This parameter will only influence, not fully restrict, results
+            from the geocoder.
+            </remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/geocoding/#Viewports"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.GeocodingRequest.Region">
+            <summary>
+            The region code, specified as a ccTLD ("top-level domain")
+            two-character value.
+            </summary>
+            <remarks>
+            Optional. This parameter will only influence, not fully restrict, results
+            from the geocoder.
+            </remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/geocoding/#RegionCodes"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.GeocodingRequest.Language">
+            <summary>
+            The language in which to return results. If language is not
+            supplied, the geocoder will attempt to use the native language of
+            the domain from which the request is sent wherever possible.
+            </summary>
+            <remarks>Optional.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/faq.html#languagesupport"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.GeocodingRequest.Sensor">
+            <summary>
+            Indicates whether or not the geocoding request comes from a device
+            with a location sensor. This value must be either true or false.
+            </summary>
+            <remarks>Required.</remarks>
+        </member>
+        <member name="F:Google.Api.Maps.Service.ServiceResponseStatus.Ok">
+            <summary>
+            Indicates that no errors occurred; the address was successfully 
+            parsed and at least one geocode was returned.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.ServiceResponseStatus.InvalidRequest">
+            <summary>
+            Indicating the service request was malformed.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.ServiceResponseStatus.ZeroResults">
+            <summary>
+            Indicates that the geocode was successful but returned no results.
+            This may occur if the geocode was passed a non-existent address or
+            a latlng in a remote location.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.ServiceResponseStatus.OverQueryLimit">
+            <summary>
+            Indicates that you are over your quota.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.ServiceResponseStatus.RequestDenied">
+            <summary>
+            Indicates that your request was denied, generally because of lack
+            of a sensor parameter.
+            </summary>
+        </member>
+        <member name="T:Google.Api.Maps.Service.Elevation.ElevationRequest">
+            <summary>
+            Provides a request for the Google Maps Elevation web service.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Elevation.ElevationRequest.Locations">
+            <summary>
+            Defines the location(s) on the earth from which to return elevation
+            data. This parameter takes either a single location as a
+            comma-separated {latitude,longitude} pair (e.g. "40.714728,-73.998672")
+            or multiple latitude/longitude pairs passed as an array or as an
+            encoded polyline.
+            </summary>
+            <remarks>Required if path not present.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/elevation/#Locations"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Elevation.ElevationRequest.Path">
+            <summary>
+            Defines a path on the earth for which to return elevation data.
+            This parameter defines a set of two or more ordered {latitude,
+            longitude} pairs defining a path along the surface of the earth.
+            This parameter must be used in conjunction with the samples
+            parameter.
+            </summary>
+            <remarks>Required if locations not present.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/elevation/#Paths"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Elevation.ElevationRequest.Samples">
+            <summary>
+            specifies the number of sample points along a path for which to return
+            elevation data. The samples parameter divides the given path into an
+            ordered set of equidistant points along the path.
+            </summary>
+            <remarks>Required if a path is specified.</remarks>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Elevation.ElevationRequest.Sensor">
+            <summary>
+            Specifies whether the application requesting elevation data is
+            using a sensor to determine the user's location. This parameter
+            is required for all elevation requests.
+            </summary>
+            <remarks>Required.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/elevation/#Sensor"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.Geometry.Location">
+            <summary>
+            Contains the geocoded latitude,longitude value. For normal address
+            lookups, this field is typically the most important.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.Geometry.LocationType">
+            <summary>
+            Stores additional data about the specified location.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.Geometry.Viewport">
+            <summary>
+            Contains the recommended viewport for displaying the returned
+            result, specified as two latitude,longitude values defining the
+            southwest and northeast corner of the viewport bounding box.
+            Generally the viewport is used to frame a result when displaying
+            it to a user.
+            </summary>
+        </member>
+        <member name="T:Google.Api.Maps.Service.Geocoding.GeocodingService">
+            <summary>
+            Provides a direct way to access a geocoder via an HTTP request.
+            Additionally, the service allows you to perform the converse operation
+            (turning coordinates into addresses); this process is known as
+            "reverse geocoding."
+            </summary>
+        </member>
+        <member name="M:Google.Api.Maps.Service.Geocoding.GeocodingService.GetResponse(Google.Api.Maps.Service.Geocoding.GeocodingRequest)">
+            <summary>
+            Sends the specified request to the Google Maps Geocoding web
+            service and parses the response as an GeocodingResponse
+            object.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Google.Api.Maps.Service.StaticMaps.StaticMap">
+            <summary>
+            The Google Static Maps API returns an image (either GIF, PNG or JPEG)
+            in response to a HTTP request via a URL. For each request, you can
+            specify the location of the map, the size of the image, the zoom level,
+            the type of map, and the placement of optional markers at locations on
+            the map.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Maps.Service.StaticMaps.StaticMap.Center">
+            <summary>
+            Defines the center of the map, equidistant from all edges of the
+            map. This parameter takes a location as either a comma-separated
+            {latitude,longitude} pair (e.g. "40.714728,-73.998672") or a
+            string address (e.g. "city hall, new york, ny") identifying a
+            unique location on the face of the earth.
+            </summary>
+            <remarks>Required if markers not present.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/staticmaps/#Locations"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.StaticMaps.StaticMap.Zoom">
+            <summary>
+            Defines the zoom level of the map, which determines the
+            magnification level of the map. This parameter takes a numerical
+            value corresponding to the zoom level of the region desired.
+            </summary>
+            <remarks>Required if markers not present.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/staticmaps/#Zoomlevels"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.StaticMaps.StaticMap.Size">
+            <summary>
+            Defines the rectangular dimensions of the map image. This parameter
+            takes a string of the form valuexvalue where horizontal pixels are
+            denoted first while vertical pixels are denoted second. For example,
+            500x400 defines a map 500 pixels wide by 400 pixels high. If you
+            create a static map that is 100 pixels wide or smaller, the
+            "Powered by Google" logo is automatically reduced in size.
+            </summary>
+            <remarks>Required.</remarks>
+        </member>
+        <member name="P:Google.Api.Maps.Service.StaticMaps.StaticMap.Format">
+            <summary>
+            Defines the format of the resulting image. By default, the Static
+            Maps API creates PNG images. There are several possible formats
+            including GIF, JPEG and PNG types. Which format you use depends on
+            how you intend to present the image. JPEG typically provides
+            greater compression, while GIF and PNG provide greater detail.
+            </summary>
+            <remarks>Optional.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/staticmaps/#ImageFormats"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.StaticMaps.StaticMap.MapType">
+            <summary>
+            Defines the type of map to construct. There are several possible
+            maptype values, including roadmap, satellite, hybrid, and terrain.
+            </summary>
+            <remarks>Optional.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/staticmaps/#MapTypes"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.StaticMaps.StaticMap.Mobile">
+            <summary>
+            Specifies whether the map will be displayed on a mobile device. Valid
+            values are true or false. Maps displayed on mobile devices may use
+            different tilesets optimized for those devices.
+            </summary>
+            <remarks>Optional.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/staticmaps/#Mobile"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.StaticMaps.StaticMap.Language">
+            <summary>
+            Defines the language to use for display of labels on map tiles. Note
+            that this parameter is only supported for some country tiles; if the
+            specific language requested is not supported for the tile set, then
+            the default language for that tileset will be used.
+            </summary>
+            <remarks>Optional.</remarks>
+        </member>
+        <member name="P:Google.Api.Maps.Service.StaticMaps.StaticMap.Markers">
+            <summary>
+            Define one or more markers to attach to the image at specified
+            locations. This parameter takes a single marker definition with
+            parameters separated by the pipe character (|). Multiple markers
+            may be placed within the same markers parameter as long as they
+            exhibit the same style; you may add additional markers of
+            differing styles by adding additional markers parameters. Note that
+            if you supply markers for a map, you do not need to specify the
+            (normally required) center and zoom parameters.
+            </summary>
+            <remarks>Optional.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/staticmaps/#Markers"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.StaticMaps.StaticMap.Path">
+            <summary>
+            Defines a single path of two or more connected points to overlay on
+            the image at specified locations. This parameter takes a string of
+            point definitions separated by the pipe character (|). You may
+            supply additional paths by adding additional path parameters. Note
+            that if you supply a path for a map, you do not need to specify the
+            (normally required) center and zoom parameters.
+            </summary>
+            <remarks>Optional.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/staticmaps/#Paths"/>
+        </member>
+        <member name="P:Google.Api.Maps.Service.StaticMaps.StaticMap.Visible">
+            <summary>
+            Specifies one or more locations that should remain visible on the
+            map, though no markers or other indicators will be displayed. Use
+            this parameter to ensure that certain features or map locations
+            are shown on the static map.
+            </summary>
+            <remarks>Optional.</remarks>
+        </member>
+        <member name="P:Google.Api.Maps.Service.StaticMaps.StaticMap.Sensor">
+            <summary>
+            Specifies whether the application requesting the static map is
+            using a sensor to determine the user's location. This parameter
+            is required for all static map requests.
+            </summary>
+            <remarks>Required.</remarks>
+            <see cref="!:http://code.google.com/apis/maps/documentation/staticmaps/#Sensor"/>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.StreetAddress">
+            <summary>
+            Indicates a precise street address.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Route">
+            <summary>
+            Indicates a named route (such as "US 101").
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Intersection">
+            <summary>
+            Indicates a major intersection, usually of two major roads.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Political">
+            <summary>
+            Indicates a political entity. Usually, this type indicates a polygon of
+            some civil administration.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Country">
+            <summary>
+            Indicates the national political entity, and is typically the highest
+            order type returned by the Geocoder.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.AdministrativeAreaLevel1">
+            <summary>
+            Indicates a first-order civil entity below the country level. Within the
+            United States, these administrative levels are states. Not all nations
+            exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.AdministrativeAreaLevel2">
+            <summary>
+            Indicates a second-order civil entity below the country level. Within the
+            United States, these administrative levels are counties. Not all nations
+            exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.AdministrativeAreaLevel3">
+            <summary>
+            Indicates a third-order civil entity below the country level. This type
+            indicates a minor civil division. Not all nations exhibit these
+            administrative levels.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.ColloquialArea">
+            <summary>
+            Indicates a commonly-used alternative name for the entity.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Locality">
+            <summary>
+            Indicates an incorporated city or town political entity.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Sublocality">
+            <summary>
+            Indicates an first-order civil entity below a locality.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Neighborhood">
+            <summary>
+            Indicates a named neighborhood.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Premise">
+            <summary>
+            Indicates a named location, usually a building or collection of
+            buildings with a common name.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Subpremise">
+            <summary>
+            Indicates a first-order entity below a named location, usually a
+            singular building within a collection of buildings with a common
+            name.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.PostalCode">
+            <summary>
+            Indicates a postal code as used to address postal mail within the
+            country.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.NaturalFeature">
+            <summary>
+            Indicates a prominent natural feature.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Airport">
+            <summary>
+            Indicates an airport.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Park">
+            <summary>
+            Indicates a named park.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.PointOfInterest">
+            <summary>
+            Indicates a named point of interest. Typically, these "POI"s are
+            prominent local entities that don't easily fit in another category
+            such as "Empire State Building" or "Statue of Liberty."
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.PostBox">
+            <summary>
+            Indicates a specific postal box.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.StreetNumber">
+            <summary>
+            Indicates the precise street number.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Floor">
+            <summary>
+            Indicates the floor of a building address.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.AddressType.Room">
+            <summary>
+            Indicates the room of a building address.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.LocationType.Rooftop">
+            <summary>
+            Indicates that the returned result is a precise geocode for which we have
+            location information accurate down to street address precision.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.LocationType.RangeInterpolated">
+            <summary>
+            Indicates that the returned result reflects an approximation (usually on
+            a road) interpolated between two precise points (such as intersections).
+            Interpolated results are generally returned when rooftop geocodes are
+            unavailable for a street address.
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.LocationType.GeometricCenter">
+            <summary>
+            Indicates that the returned result is the geometric center of a result
+            such as a polyline (for example, a street) or polygon (region).
+            </summary>
+        </member>
+        <member name="F:Google.Api.Maps.Service.Geocoding.LocationType.Approximate">
+            <summary>
+            Indicates that the returned result is approximate.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.AddressComponent.LongName">
+            <summary>
+            The full text description or name of the address component as
+            returned by the Geocoder.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.AddressComponent.ShortName">
+            <summary>
+            An abbreviated textual name for the address component, if available.
+            For example, an address component for the state of Alaska may have
+            a short_name of "AK" using the 2-letter postal abbreviation.
+            </summary>
+        </member>
+        <member name="P:Google.Api.Maps.Service.Geocoding.AddressComponent.Types">
+            <summary>
+            Indicates the type of address component. This array contains a set
+            of one or more tags.
+            </summary>
+        </member>
+        <member name="T:Google.Api.Maps.Service.Elevation.ElevationService">
+            <summary>
+            The Elevation service provides elevation data for all locations on the
+            surface of the earth, including depth locations on the ocean floor
+            (which return negative values). In those cases where Google does not
+            possess exact elevation measurements at the precise location you
+            request, the service will interpolate and return an averaged value
+            using the four nearest locations.
+            </summary>
+            <see cref="!:http://code.google.com/apis/maps/documentation/elevation/"/>
+        </member>
+        <member name="M:Google.Api.Maps.Service.Elevation.ElevationService.GetResponse(Google.Api.Maps.Service.Elevation.ElevationRequest)">
+            <summary>
+            Sends the specified request to the Google Maps Elevation web
+            service and parses the response as an ElevationResponse
+            object.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
