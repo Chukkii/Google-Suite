@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleSuite", "GoogleSuite\GoogleSuite.csproj", "{38F47FE2-3785-45BE-8678-A36982A7909B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleLibrary", "..\..\Dropbox\Google Maps Test\GoogleCalendarLibrary\GoogleLibrary.csproj", "{A7CF31DC-4BF1-462F-81D0-8E282884A081}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleLibrary", "GoogleLibrary\GoogleLibrary.csproj", "{A7CF31DC-4BF1-462F-81D0-8E282884A081}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

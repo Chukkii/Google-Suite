@@ -1,0 +1,13 @@
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\bin\Debug\GoogleCalendarLibrary.dll
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\bin\Debug\GoogleCalendarLibrary.pdb
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\obj\Debug\GoogleCalendarLibrary.dll
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\obj\Debug\GoogleCalendarLibrary.pdb
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\bin\Debug\Google.Api.Maps.Service.dll
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\bin\Debug\Google.Api.Maps.Service.pdb
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\bin\Debug\Google.Api.Maps.Service.xml
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\bin\Debug\Google.GData.AccessControl.DLL
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\bin\Debug\Google.GData.Calendar.dll
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\bin\Debug\Google.GData.Client.dll
+C:\Users\Bruce\Dropbox\Google Maps Test\GoogleCalendarLibrary\bin\Debug\Google.GData.Extensions.dll

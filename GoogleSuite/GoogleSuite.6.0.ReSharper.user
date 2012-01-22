@@ -1,10 +1,8 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="A7CF31DC-4BF1-462F-81D0-8E282884A081/f:MapManager.cs" caret="1146" fromTop="37" />
-      <File id="A7CF31DC-4BF1-462F-81D0-8E282884A081/f:Extensions.cs" caret="0" fromTop="0" />
-      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Controllers/f:HomeController.cs" caret="755" fromTop="21" />
       <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Views/d:Home/f:Index.cshtml" caret="201" fromTop="11" />
+      <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Controllers/f:HomeController.cs" caret="276" fromTop="8" />
     </RecentFiles>
     <RecentEdits>
       <File id="38F47FE2-3785-45BE-8678-A36982A7909B/d:Controllers/f:HomeController.cs" caret="117" fromTop="4" />
